@@ -2,7 +2,7 @@ def version = "${env.BUILD_NUMBER}"
 
 node('docker') {
     stage('Checkout') {
-      git credentialsId: 'god', url: 'http://user@bitbucket:7990/scm/am/amazon-project.git'
+        scm checkout
     }
 
     //это стадия сборки
